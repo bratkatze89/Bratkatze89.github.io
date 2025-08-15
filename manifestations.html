@@ -1,89 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manifestations – Eat Art Anarchy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manifestations — Eat Art Anarchy</title>
+<style>
     body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        background: linear-gradient(-45deg, #000000, #1a1a1a, #111111, #000000);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards, gradientShift 15s ease infinite;
     }
+
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
     header {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 1rem 2rem;
-      text-align: center;
-      border-bottom: 2px solid #00ffe0;
+        text-align: center;
+        padding: 2rem;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #00ffe0;
+        font-size: 2.5rem;
+        color: gold;
+        margin-bottom: 0.5rem;
     }
-    nav {
-      margin-top: 0.5rem;
+
+    .blog-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
     }
-    nav a {
-      margin: 0 1rem;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
+
+    .blog-post {
+        margin-bottom: 2rem;
     }
-    nav a:hover {
-      color: #00ffe0;
+
+    .blog-post h2 {
+        color: gold;
+        margin-bottom: 0.5rem;
     }
-    main {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 2rem;
+
+    .blog-post p {
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
     }
-    article {
-      margin-bottom: 3rem;
-      border-bottom: 1px solid #444;
-      padding-bottom: 2rem;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 1rem;
-    }
+
     footer {
-      text-align: center;
-      padding: 2rem;
-      border-top: 1px solid #444;
-      font-size: 0.9rem;
-      color: #ccc;
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin-top: 3rem;
     }
-  </style>
+</style>
 </head>
 <body>
-  <header>
-    <h1>Eat Art Anarchy</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="impressions.html">Impressions</a>
-      <a href="expressions.html">Expressions</a>
-      <a href="manifestations.html">Manifestations</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Manifestations</h2>
+<header>
+    <h1>Manifestations</h1>
+    <p>Exploring art theories, movements, and ideas</p>
+</header>
 
-    <article>
-      <h3>First Manifestation</h3>
-      <p>This is the first post in the Impressions section. It contains some text and a picture.</p>
-      <img src="https://placehold.co/600x300?text=Impression+Image" alt="Placeholder Image">
-    </article>
+<div class="blog-container">
 
-    <!-- Add more <article> blocks here for new posts -->
-  </main>
+    <div class="blog-post">
+        <h2>The Chaos Principle in Abstract Expressionism</h2>
+        <p>
+            Abstract Expressionism thrives on spontaneity and unpredictability.
+            In this piece, we explore how chaos doesn’t mean the absence of order,
+            but rather a deeper, hidden structure that the artist uncovers during creation.
+        </p>
+    </div>
 
-  <footer>
-    © 2025 Your Name — Powered by GitHub Pages
-  </footer>
+    <div class="blog-post">
+        <h2>The Alchemy of Color</h2>
+        <p>
+            Colors interact like elements in an alchemist’s crucible.
+            By mixing, layering, and contrasting pigments, artists can create emotional reactions
+            that bypass rational thought and speak directly to the subconscious.
+        </p>
+    </div>
+
+    <div class="blog-post">
+        <h2>Time as a Medium</h2>
+        <p>
+            What if art wasn’t static? We examine installations and performances
+            that use time itself as a creative ingredient — evolving and decaying in real-time.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2025 Eat Art Anarchy — All Rights Reserved
+</footer>
+
 </body>
 </html>
