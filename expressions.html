@@ -1,89 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expressions – Eat Art Anarchy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expressions</title>
+<style>
     body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        font-family: Arial, sans-serif;
+        color: white;
+        opacity: 0; /* For fade-in */
+        animation: fadeIn 1s ease-in forwards;
     }
+
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+
     header {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 1rem 2rem;
-      text-align: center;
-      border-bottom: 2px solid #00ffe0;
+        text-align: center;
+        padding: 2rem;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #00ffe0;
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 0.5rem;
     }
-    nav {
-      margin-top: 0.5rem;
+
+    .gallery {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        text-align: center;
     }
-    nav a {
-      margin: 0 1rem;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
+
+    .gallery h2 {
+        color: white;
+        margin-bottom: 1rem;
     }
-    nav a:hover {
-      color: #00ffe0;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
     }
-    main {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 2rem;
+
+    .grid img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+        transition: transform 0.3s ease;
     }
-    article {
-      margin-bottom: 3rem;
-      border-bottom: 1px solid #444;
-      padding-bottom: 2rem;
+
+    .grid img:hover {
+        transform: scale(1.05);
     }
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 1rem;
+
+    .contact-btn {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.6rem 1.2rem;
+        background-color: gold;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        text-decoration: none;
     }
+
+    .contact-btn:hover {
+        background-color: #ffda6a;
+        transform: scale(1.05);
+    }
+
     footer {
-      text-align: center;
-      padding: 2rem;
-      border-top: 1px solid #444;
-      font-size: 0.9rem;
-      color: #ccc;
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin-top: 3rem;
     }
-  </style>
+</style>
 </head>
 <body>
-  <header>
-    <h1>Eat Art Anarchy</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="impressions.html">Impressions</a>
-      <a href="expressions.html">Expressions</a>
-      <a href="manifestations.html">Manifestations</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Expressions</h2>
+<header>
+    <h1>Expressions</h1>
+    <p>Exploring art through different collections</p>
+</header>
 
-    <article>
-      <h3>First Expression</h3>
-      <p>This is the first post in the Impressions section. It contains some text and a picture.</p>
-      <img src="https://placehold.co/600x300?text=Impression+Image" alt="Placeholder Image">
-    </article>
+<div class="gallery">
+    <h2>Abstract Visions</h2>
+    <div class="grid">
+        <img src="assets/images/expressions/abstract1.jpg" alt="Abstract Painting 1">
+        <img src="assets/images/expressions/abstract2.jpg" alt="Abstract Painting 2">
+        <img src="assets/images/expressions/abstract3.jpg" alt="Abstract Painting 3">
+        <img src="assets/images/expressions/abstract4.jpg" alt="Abstract Painting 4">
+    </div>
+    <a href="contact.html" class="contact-btn">Contact</a>
+</div>
 
-    <!-- Add more <article> blocks here for new posts -->
-  </main>
+<div class="gallery">
+    <h2>Urban Stories</h2>
+    <div class="grid">
+        <img src="assets/images/expressions/urban1.jpg" alt="Urban Art 1">
+        <img src="assets/images/expressions/urban2.jpg" alt="Urban Art 2">
+        <img src="assets/images/expressions/urban3.jpg" alt="Urban Art 3">
+    </div>
+    <a href="contact.html" class="contact-btn">Contact</a>
+</div>
 
-  <footer>
-    © 2025 Your Name — Powered by GitHub Pages
-  </footer>
+<div class="gallery">
+    <h2>Nature’s Colors</h2>
+    <div class="grid">
+        <img src="assets/images/expressions/nature1.jpg" alt="Nature Painting 1">
+        <img src="assets/images/expressions/nature2.jpg" alt="Nature Painting 2">
+        <img src="assets/images/expressions/nature3.jpg" alt="Nature Painting 3">
+        <img src="assets/images/expressions/nature4.jpg" alt="Nature Painting 4">
+    </div>
+    <a href="contact.html" class="contact-btn">Contact</a>
+</div>
+
+<footer>
+    &copy; 2025 Eat Art Anarchy — All Rights Reserved
+</footer>
+
 </body>
 </html>
