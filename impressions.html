@@ -1,89 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impressions – Eat Art Anarchy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressions</title>
+<style>
     body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        opacity: 0;                /* For fade-in */
+        animation: fadeIn 1s ease-in forwards;
     }
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 1rem 2rem;
-      text-align: center;
-      border-bottom: 2px solid #00ffe0;
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #00ffe0;
+
+    .image-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        margin: 20px 0;
+        overflow: hidden;
+        cursor: pointer;
     }
-    nav {
-      margin-top: 0.5rem;
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
     }
-    nav a {
-      margin: 0 1rem;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        color: gold;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
-    nav a:hover {
-      color: #00ffe0;
+
+    .image-container:hover img {
+        transform: scale(1.05);
     }
-    main {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 2rem;
+
+    .image-container:hover .overlay {
+        opacity: 1;
     }
-    article {
-      margin-bottom: 3rem;
-      border-bottom: 1px solid #444;
-      padding-bottom: 2rem;
+
+    a {
+        text-decoration: none;
+        color: inherit;
     }
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      border-top: 1px solid #444;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-  </style>
+</style>
 </head>
 <body>
-  <header>
-    <h1>Eat Art Anarchy</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="impressions.html">Impressions</a>
-      <a href="expressions.html">Expressions</a>
-      <a href="manifestations.html">Manifestations</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Impressions</h2>
+    <a href="blog-post-1.html">
+        <div class="image-container">
+            <img src="b009cfb7-85d2-4618-9e14-894f3ac9bee7.jpg" alt="Nobelhart&Schmutzig">
+            <div class="overlay">Blog 1 Title</div>
+        </div>
+    </a>
 
-    <article>
-      <h3>First Impression</h3>
-      <p>This is the first post in the Impressions section. It contains some text and a picture.</p>
-      <img src="https://placehold.co/600x300?text=Impression+Image" alt="Placeholder Image">
-    </article>
+    <a href="blog-post-2.html">
+        <div class="image-container">
+            <img src="https://placehold.co/600x400?text=Blog+2" alt="Blog Post 2">
+            <div class="overlay">Blog 2 Title</div>
+        </div>
+    </a>
 
-    <!-- Add more <article> blocks here for new posts -->
-  </main>
+    <a href="blog-post-3.html">
+        <div class="image-container">
+            <img src="https://placehold.co/600x400?text=Blog+3" alt="Blog Post 3">
+            <div class="overlay">Blog 3 Title</div>
+        </div>
+    </a>
 
-  <footer>
-    © 2025 Your Name — Powered by GitHub Pages
-  </footer>
 </body>
 </html>
